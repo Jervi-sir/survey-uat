@@ -15,7 +15,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function showAll()
-    {   (
+    {   
         $mmbr = Member::all();
 
         return $mmbr;
