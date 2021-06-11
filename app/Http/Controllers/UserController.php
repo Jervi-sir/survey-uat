@@ -15,16 +15,16 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function showAll()
-    {   
-        $mmbr = Member::all();
+    {   (
+        $mmbr = Member::all);
 
         return $mmbr;
     }
 
     public function store()
     {
-        if(request()->header('Authosization') == $this->token_key)
-        {
+        //if(request()->header('Authosization') == $this->token_key)
+        //{
             if(request('choice') == NULL)
             {
                 return response('choice empty', 275);
@@ -59,12 +59,12 @@ class UserController extends Controller
             ]);
 
             return response('man that a succ', 200);
-        }
+        //}
 
-        else {
+        /*else {
             return "you are not authorized to do that";
         }
-        
+        */
     }
 
     /**
