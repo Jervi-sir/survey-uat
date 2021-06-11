@@ -48,13 +48,13 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => DATABASE_URL('DATABASE_URL'),
-            'host' => DATABASE_URL('DB_HOST', '127.0.0.1'),
-            'port' => DATABASE_URL('DB_PORT', '3306'),
-            'database' => DATABASE_URL('DB_DATABASE', 'forge'),
-            'username' => DATABASE_URL('DB_USERNAME', 'forge'),
-            'password' => DATABASE_URL('DB_PASSWORD', ''),
-            'unix_socket' => DATABASE_URL('DB_SOCKET', ''),
+            'url' => $DATABASE_URL('DATABASE_URL'),
+            'host' => $DATABASE_URL('DB_HOST', '127.0.0.1'),
+            'port' => $DATABASE_URL('DB_PORT', '3306'),
+            'database' => $DATABASE_URL('DB_DATABASE', 'forge'),
+            'username' => $DATABASE_URL('DB_USERNAME', 'forge'),
+            'password' => $DATABASE_URL('DB_PASSWORD', ''),
+            'unix_socket' => $DATABASE_URL('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
@@ -62,7 +62,7 @@ return [
             'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => DATABASE_URL('MYSQL_ATTR_SSL_CA'),
+                PDO::MYSQL_ATTR_SSL_CA => $DATABASE_URL('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
 
