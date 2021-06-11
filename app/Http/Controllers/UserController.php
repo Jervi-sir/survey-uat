@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function showAll()
     {   (
-        $mmbr = Member::all);
+        $mmbr = Member::all();
 
         return $mmbr;
     }
