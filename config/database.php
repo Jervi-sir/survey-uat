@@ -3,11 +3,34 @@
 use Illuminate\Support\Str;
 
 
-$DATABASE_URL = parse_url('mysql://xo879w518pgvbfpj:b4a1q71q6maegvhm@un0jueuv2mam78uv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ou9trhqsw47kp9nv');
-
+$DATABASE_URL = 'mysql://dbsy5p4uill4pv48:gzdl9w0r0vxdsu3a@un0jueuv2mam78uv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/jw5iunnu8uny97va';
+$DB_HOST = 'un0jueuv2mam78uv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	';
+$DB_PORT = '3306';
+$DB_DATABASE = 'jw5iunnu8uny97va';
+$DB_USERNAME = 'dbsy5p4uill4pv48';
+$DB_PASSWORD = 'gzdl9w0r0vxdsu3a';
 
 return [
-
+    /*
+    'mysql' => [
+        'driver' => 'mysql',
+        'url' => env('DATABASE_URL'),
+        'host' => env('DB_HOST', '127.0.0.1'),
+        'port' => env('DB_PORT', '3306'),
+        'database' => env('DB_DATABASE', 'forge'),
+        'username' => env('DB_USERNAME', 'forge'),
+        'password' => env('DB_PASSWORD', ''),
+        'unix_socket' => env('DB_SOCKET', ''),
+        'charset' => 'utf8mb4',
+        'collation' => 'utf8mb4_unicode_ci',
+        'prefix' => '',
+        'prefix_indexes' => true,
+        'strict' => true,
+        'engine' => null,
+        'options' => extension_loaded('pdo_mysql') ? array_filter([
+            PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+        ]) : [],
+    ],*/
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -49,12 +72,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'url' => $DATABASE_URL,
+            'host' => $DB_HOST,
+            'port' => $DB_PORT,
+            'database' => $DB_DATABASE,
+            'username' => $DB_USERNAME,
+            'password' => $DB_PASSWORD,
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
