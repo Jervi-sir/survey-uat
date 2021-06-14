@@ -193,6 +193,7 @@
   <table class="datatable table table-striped table-bordered">
     <thead>
         <tr>
+            <th></th>
             <th>Full name</th>
             <th>Phone Number</th>
             <th>Choice</th>
@@ -202,6 +203,7 @@
     <tbody>
         @foreach ($members as $mmbr)
             <tr>
+                <td style="text-align: center;">{{$loop->index}}</td>
                 <td>{{$mmbr->full_name}}</td>
                 <td>
                     <a href="tel:{{$mmbr->phone_number}}">{{$mmbr->phone_number}}</a>
