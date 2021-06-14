@@ -203,7 +203,9 @@
         @foreach ($members as $mmbr)
             <tr>
                 <td>{{$mmbr->full_name}}</td>
-                <td>{{$mmbr->phone_number}}</td>
+                <td>
+                    <a href="tel:{{$mmbr->phone_number}}">{{$mmbr->phone_number}}</a>
+                </td>
                 @if($mmbr->choice == 'tree')
                 <td class="green">تشجـــير</td>
                 @endif
