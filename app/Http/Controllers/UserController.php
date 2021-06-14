@@ -18,7 +18,7 @@ class UserController extends Controller
     {   
         $mmbr = Member::all();
 
-        return $mmbr;
+        return view('results', ['members' => $mmbr]);
     }
 
     public function store()
